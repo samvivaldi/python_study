@@ -1,0 +1,18 @@
+fig = plt.figure()
+
+ax1 = fig.add_subplot(2, 2, 1)
+ax2 = fig.add_subplot(2, 2, 2)
+ax3 = fig.add_subplot(2, 2, 3)
+
+ax1.hist(np.random.randn(100), bins=20)
+x = np.arange(30)
+y = x + 3 * np.random.randn(30)
+ax2.scatter(x, y)
+ax3.plot(np.random.randn(50).cumsum())
+
+
+--------------------------------------------------
+
+
+fig, axes = plt.subplots(ncols=2, nrows=2)
+axes[1][0].plot(np.random.randn(50).cumsum())
