@@ -11,14 +11,14 @@ ax2.scatter(x, y)
 ax3.plot(np.random.randn(50).cumsum())
 
 
---------------------------------------------------
---------------------------------------------------
+###################################
 
 
 fig, axes = plt.subplots(ncols=2, nrows=2)
 axes[1][0].plot(np.random.randn(50).cumsum())
 
 
+###################################
 
 f = lambda y : np.sin(x)
 
@@ -45,3 +45,4 @@ plt.plot(x, f(x),'r')
 plt.subplot(2,2,4)
 plt.title("cos")
 plt.plot(x, ycos)
+
