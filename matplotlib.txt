@@ -17,3 +17,31 @@ ax3.plot(np.random.randn(50).cumsum())
 
 fig, axes = plt.subplots(ncols=2, nrows=2)
 axes[1][0].plot(np.random.randn(50).cumsum())
+
+
+
+f = lambda y : np.sin(x)
+
+x = np.arange(0, 3 * np.pi, 0.1)
+
+len(x)
+
+ycos = np.cos(x)
+
+plt.figure(figsize=(15, 5))
+plt.subplot(2,2,1)
+plt.title('sin')
+plt.plot(x, f(x),'r')
+
+plt.subplot(2,2,4)
+plt.title("cos")
+plt.plot(x, ycos)
+
+plt.figure(figsize=(15, 5))
+plt.subplot(2,2,1)
+plt.title('sin')
+plt.plot(x, f(x),'r')
+
+plt.subplot(2,2,4)
+plt.title("cos")
+plt.plot(x, ycos)
