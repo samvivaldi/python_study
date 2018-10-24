@@ -24,7 +24,6 @@ f = lambda y : np.sin(x)
 
 x = np.arange(0, 3 * np.pi, 0.1)
 
-len(x)
 
 ycos = np.cos(x)
 
@@ -46,3 +45,8 @@ plt.subplot(2,2,4)
 plt.title("cos")
 plt.plot(x, ycos)
 
+########################
+
+ÈÆ·ÃÆò°¡ = pd.DataFrame(results, columns=['train', 'test'])
+
+ÈÆ·ÃÆò°¡.plot(ylim=(0.9, 1.01), style=['go--', 'ro--'])
