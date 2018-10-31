@@ -11,7 +11,7 @@ c.NotebookApp.notebook_dir = 'D:/python_study'
 sigmoid 함수의 리턴값은 곧 입력한 트레이팅 데이타가 특정 클래스에 속할 확률이 되므로 
 로지스틱 회귀는 입력되는 트레이닝 데이타의 특정 클래스에 포함될 예측 확률에 따라 머신러닝을 수행하는 알고리즘일을 알 수 있습니다.
 
-
+---------------------------------------------------------------------------
 
 
 시그모이드함수
@@ -23,3 +23,60 @@ def sigmoid(x, deff=False):
   else:
     return 1 / (1 + math.exp(-x))
 
+---------------------------------------------------------------------------
+
+#softmax
+
+import numpy as np
+import matplotlib.pyplot as plt
+ 
+def softmax(x):
+    e_x = np.exp(x - np.max(x))
+    return e_x / e_x.sum()
+ 
+x = np.array([1.0,1.0,2.0])
+ 
+y = softmax(x)
+ 
+print(np.sum(y))
+ 
+ratio = y
+labels = y
+ 
+plt.pie(ratio, labels=labels, shadow=True, startangle=90)
+plt.show()
+[출처] [딥러닝] 활성화 함수 소프트맥스(Softmax)|작성자 똑똑이
+
+---------------------------------------------------------------------------
+
+객체저장
+import pickle
+with open('./pickle','wb') as f:
+    name = '유재석'
+    birth= '1972/08/14/s'
+    height = '177/cm'
+    weight = '62/kg'
+    country = 'KOREA'
+    answer = {1:'1',2:'4', 3:'4', 4:'2', 5:'5'}
+
+    pickle.dump(name, f)
+    pickle.dump(birth, f)
+    pickle.dump(height, f)
+    pickle.dump(weight, f)
+    pickle.dump(country, f)
+    pickle.dump(answer, f)
+    
+
+with open('./pickle','rb') as f:
+    tmpLst = list()
+    result = dict()
+    tag = ['name','birth','height','weight','country','answer']
+    try:
+        while(1):
+            tmpLst.append(pickle.load(f))
+    except EOFError as e:
+        print(e)
+    finally:
+        result=dict(zip(tag,tmpLst))
+    print(result)
+[출처] python pickle 예제|작성자 고라
