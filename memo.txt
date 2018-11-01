@@ -79,4 +79,22 @@ with open('./pickle','rb') as f:
     finally:
         result=dict(zip(tag,tmpLst))
     print(result)
-[출처] python pickle 예제|작성자 고라
+
+------------------------------------------
+
+from tensorflow.python.client import device_lib
+device_lib.list_local_devices()
+[출처] [tensorflow] CPU, GPU 장비 확인|작성자 똑똑이
+
+[결과] (예시)
+[
+  name: "/device:CPU:0" 
+  device_type: "CPU" 
+  memory_limit: 268435456 locality { } 
+  incarnation: 4251054241387008400
+]
+
+프로그래밍 할 때 사용하고자 하는 CPU 또는 GPU 이름을 지정할 수 있다.
+tf.device('/device:CPU:0')
+끝.
+
