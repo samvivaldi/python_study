@@ -1,10 +1,8 @@
-(base) C:\Users\master>jupyter notebook --generate-config
-Overwrite C:\Users\master\.jupyter\jupyter_notebook_config.py with default config? [y/N]n
-
-c.NotebookApp.notebook_dir = 'D:/python_study'
 
 
-aaa
+신경망 학습의 목적은 손실 함수의 값을 가능한 한 낮추는 매개변수를 찾는 것이었죠. 이는 곧 매개변수의 최적값을 찾는 문제이며, 이러한 문제를 푸는 것을 최적화(optimization)라 합니다
+
+--------------------------------------------
 
 로지스틱회귀에서는 순입력 함수의 리턴값에 대해 가중치 업데이트 여부를 결정하는 활성 함수로 sigmod 함수를 이용합니다.
 즉 로지스틱 회귀는 순입력 함수의 리턴값을 sigmoid 함수에 대입하여 그 결과값을 가지고 가중치 업데이트를 할 지 말지를 결정하는 것이 핵심입니다.
@@ -23,6 +21,13 @@ def sigmoid(x, deff=False):
   else:
     return 1 / (1 + math.exp(-x))
 
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+def softmax(x):
+    e_x = np.exp(x - np.max(x))
+    return e_x / e_x.sum()
 ---------------------------------------------------------------------------
 
 #softmax
@@ -45,6 +50,7 @@ labels = y
  
 plt.pie(ratio, labels=labels, shadow=True, startangle=90)
 plt.show()
+
 [출처] [딥러닝] 활성화 함수 소프트맥스(Softmax)|작성자 똑똑이
 
 ---------------------------------------------------------------------------
