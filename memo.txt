@@ -104,3 +104,24 @@ device_lib.list_local_devices()
 tf.device('/device:CPU:0')
 ³¡.
 
+
+---------------------
+
+
+from pickle import dump
+from pickle import load
+
+filename = 'finalized_model.sav'
+
+dump(model, open(filename, 'wb'))
+
+loaded_model = load(open(filename, 'rb'))
+
+
+
+
+
+
+
+
+
