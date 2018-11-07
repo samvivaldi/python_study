@@ -11,6 +11,15 @@ sigmoid 함수의 리턴값은 곧 입력한 트레이팅 데이타가 특정 클래스에 속할 확률이 되
 
 ---------------------------------------------------------------------------
 
+iris = pd.read_csv('data/iris.data', header=None)
+c = iris[4]
+c = c.replace(np.unique(c), ['r','g','b'])
+_=pd.plotting.scatter_matrix(DataFrame(iris), figsize=(10,10), c=c)iris = pd.read_csv('data/iris.data', header=None)
+c = iris[4]
+c = c.replace(np.unique(c), ['r','g','b'])
+_=pd.plotting.scatter_matrix(DataFrame(iris), figsize=(10,10), c=c)
+
+-----------------------------------------------------------
 
 시그모이드함수
 import math
