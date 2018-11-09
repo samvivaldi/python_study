@@ -1,0 +1,36 @@
+import에도 두 가지 방법이 있습니다.
+
+import 모듈
+
+from 모듈 import 변수나 함수
+첫번째 방법은 모듈 전체를 가져오구요, 두번째 방법은 모듈 내에서 필요한 것만 콕 찍어서 가져오는 방법이죠. 두 방법을 비교해볼까요? 어제 소개해드린 Tkinter(티 케이 인터) 모듈을 두 가지 방법으로 사용해보겠습니다.
+
+>>> import Tkinter
+>>> Tkinter.widget = Tkinter.Label(None, text='I love Python!')
+>>> Tkinter.widget.pack()
+첫 번째 방법으로 모듈을 불러오면 모듈 내의 변수를 사용하기 위해서는 '모듈.변수'의 형식으로 써주어야 합니다. 매번 써주려면 좀 번거롭겠죠?
+
+>>> from Tkinter import *
+>>> widget = Label(None, text='I love Python!')
+>>> widget.pack()
+
+
+-----------------------------------------------------------
+
+
+ex = [1, 2, 3, 4, 5]
+f = lambda x: x ** 2
+print(list(map(f, ex))
+
+
+from functools import reduce
+print(reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]))
+
+
+def factorial(n):
+    return reduce(
+            lambda x, y: x*y, range(1, n+1))
+
+factorial(5)
+
+-----------------------------------------------------------

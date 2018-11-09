@@ -11,6 +11,14 @@ sigmoid 함수의 리턴값은 곧 입력한 트레이팅 데이타가 특정 클래스에 속할 확률이 되
 
 ---------------------------------------------------------------------------
 
+tensorflow CNTK Theano
+
+
+3가지 종류의 붓꽃. 꽃잎과 꽃받침의 크기에 따라 종이 구분된다
+https://blog.naver.com/drvoss/221172647011
+
+
+
 iris = pd.read_csv('data/iris.data', header=None)
 c = iris[4]
 c = c.replace(np.unique(c), ['r','g','b'])
