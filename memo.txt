@@ -1,5 +1,58 @@
+from sklearn.model_selection import train_test_split
 
 
+from sklearn.linear_model import Ridge
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import LinearRegression
+
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.preprocessing import MinMaxScaler, PolynomialFeatures
+
+
+poly_features = PolynomialFeatures(degree=2)	
+X_poly = poly_features.fit_transform(X)
+
+
+
+			StandardScaler는 각 특성의 평균을 0 분산을 1로 변경하여 모든 특성이 같은 크기를 가지게 한다.
+			MinmaxScaler는 모든 특성이 정확하게 0과 1사이에 위치하도록 데이터를 변경한다.
+			
+			데이터 전처리를 하기 전의 성능
+			# 훈련 세트 정확도 : 1.000
+			# 테스트 세트 정확도 : 0.629
+			
+			MinMaxScaler를 사용하여 데이터 전처리 후 성능
+			# 스케일 조정된 훈련 세트 정확도 : 0.99
+			# 스케일 조정된 테스트 세트 정확도 : 0.97
+			
+			StandardScaler를 사용하여 데이터 전처리 후 성능
+			# 스케일 조정된 훈련 세트 정확도 : 1.00
+			# 스케일 조정된 테스트 세트 정확도 : 0.96
+
+
+(데이터셋 구성)
+CRIM: 자치시(town) 별 1인당 범죄율
+ZN: 25,000 평방피트를 초과하는 거주지역의 비율
+INDUS:비소매상업지역이 점유하고 있는 토지의 비율
+CHAS: 찰스강에 대한 더미변수(강의 경계에 위치한 경우는 1, 아니면 0)
+NOX: 10ppm 당 농축 일산화질소
+RM: 주택 1가구당 평균 방의 개수
+AGE: 1940년 이전에 건축된 소유주택의 비율
+DIS: 5개의 보스턴 직업센터까지의 접근성 지수
+RAD: 방사형 도로까지의 접근성 지수
+TAX: 10,000 달러 당 재산세율
+PTRATIO: 자치시(town)별 학생/교사 비율
+B: 1000(Bk-0.63)^2, 여기서 Bk는 자치시별 흑인의 비율을 말함.
+LSTAT: 모집단의 하위계층의 비율(%)
+MEDV: 본인 소유의 주택가격(중앙값) (단위: $1,000)
+
+Neural network 을 통한 regression 에서 MSE 가 약 20 이 나오면 정확하게 regression 이 된 것 입니다.
+[출처] Feature scaling 방법 및 training 과정 시각화(visualization)|작성자 코딩박사오박사
+범죄율, 평균 방의 개수, 학생/교사 비율, 직업센터까지의 접근성 지수
+
+
+
+--------------------------------------------
 신경망 학습의 목적은 손실 함수의 값을 가능한 한 낮추는 매개변수를 찾는 것이었죠. 이는 곧 매개변수의 최적값을 찾는 문제이며, 이러한 문제를 푸는 것을 최적화(optimization)라 합니다
 
 --------------------------------------------
