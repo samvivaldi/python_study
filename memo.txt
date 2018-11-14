@@ -4,6 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Ridge
 from sklearn.linear_model import Lasso
 from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
+
 
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.preprocessing import MinMaxScaler, PolynomialFeatures
@@ -192,11 +194,12 @@ dump(model, open(filename, 'wb'))
 
 loaded_model = load(open(filename, 'rb'))
 
+-------------------------------------------------------------------------------
+iris
+keras : https://blog.naver.com/wideeyed/221329615996
+R : https://blog.naver.com/seodaeho91/221312210281
+tenserflow : https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/tutorials/tflearn/
 
 
-
-
-
-
-
+keras image : https://github.com/parkskwan/cnn_img
 
