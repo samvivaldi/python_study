@@ -203,3 +203,31 @@ tenserflow : https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/tut
 
 keras image : https://github.com/parkskwan/cnn_img
 
+-------------------------------------------------------------------------------
+
+손실함수
+https://blog.naver.com/worb1605/221193295856
+#MSE
+def Mean_Square_Error(y,t):
+    return 0.5 * np.sum((y-t)**2)
+
+#CEE
+def Cross_Entropy_Error(y, t):
+    return -np.sum(t * np.log(y))
+
+#CEE
+def Cross_Entropy_Error(y, t):
+    delta = 1e-07
+    return -np.sum(t * np.log(y+delta))
+위와 같이 delta라는 숫자를 정해서 더해주어 0에 가깝게 바뀌는 일을 막아 계산을 계속할 수 있게 해주고 있다.
+[출처] 손실함수(Loss Function)|작성자 worb1605
+-------------------------------------------------------------------------------
+
+from PIL import Image
+ -> PIL은 Python Imange Library 인데, Interpreter에서 이미지 프로세싱이 가능하도록 만들어둔             라이브러리이다. 해당 라이브러리에서 Image라는 함수를 제약없이 쓰겠다는 선언이다.
+[출처] MNIST|작성자 worb1605
+
+
+
+
+
