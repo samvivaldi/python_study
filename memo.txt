@@ -234,7 +234,8 @@ from PIL import Image
  -> PIL은 Python Imange Library 인데, Interpreter에서 이미지 프로세싱이 가능하도록 만들어둔             라이브러리이다. 해당 라이브러리에서 Image라는 함수를 제약없이 쓰겠다는 선언이다.
 [출처] MNIST|작성자 worb1605
 
-
-
+-------------------------------------------------------------------------------
+plot_decision_regions
+https://github.com/rasbt/python-machine-learning-book/blob/master/code/optional-py-scripts/ch03.py
 
 
