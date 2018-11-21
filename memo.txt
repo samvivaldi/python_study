@@ -238,4 +238,7 @@ from PIL import Image
 plot_decision_regions
 https://github.com/rasbt/python-machine-learning-book/blob/master/code/optional-py-scripts/ch03.py
 
+-------------------------------------------------------------------------------
+cross entropy
+http://funmv2013.blogspot.com/2017/01/cross-entropy.html
 
