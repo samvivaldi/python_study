@@ -1,0 +1,77 @@
+items = 'zero one two three'.split() # 빈칸을 기준으로 문자열 나누기
+example = 'python,jquery,javascript' # ","을 기준으로 문자열 나누기
+example.split(",")
+
+
+colors = ['red', 'blue', 'green', 'yellow']
+result = '-'.join(colors) # 연결 시 "-"으로 연결
+
+
+result = [i for i in range(10)]
+print(result)
+
+
+
+result = [i for i in range(10) if i % 2 == 0]
+print(result)
+
+
+word_1 = "Hello"
+word_2 = "World"
+result = [i+j for i in word_1 for j in word_2]
+
+print(result)
+
+
+
+words = 'The quick brown fox jumps over the lazy dog'.split()
+print(words)
+
+stuff = [[w.upper(), w.lower(), len(w)] for w in words]
+
+
+
+alist = ['a1', 'a2', 'a3']
+blist = ['b1', 'b2', 'b3']
+
+for a, b in zip(alist, blist):
+    print(a, b)
+
+
+
+alist = ['a1', 'a2', 'a3']
+blist = ['b1', 'b2', 'b3']
+
+for i, (a, b) in enumerate(zip(alist, blist)):
+    print(i, a, b)
+
+
+ex = [1, 2, 3, 4, 5]
+f = lambda x: x ** 2
+print(list(map(f, ex)))
+
+
+from functools import reduce
+print(reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]))
+
+
+
+
+def factorial(n):
+    return reduce(
+            lambda x, y: x*y, range(1, n+1))
+factorial(5)
+
+
+for data in zip(*([1, 2], [3, 4], [5, 6])):
+    print(sum(data))
+
+--------------------------------------------------------------
+
+Numpy
+- Numerical Python
+- 파이썬의 고성능 과학 계산용 패키지
+- Matrix와 Vector와 같은 Array 연산의 사실상의 표준
+- 한글로 넘파이로 주로 통칭, 넘피/늄파이라고 부르기도 함
+
+
